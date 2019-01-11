@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a548f55fe673e0f4a82d38120a4b24ed, type: 3}
+  m_Name: Iron
+  m_EditorClassIdentifier: 
+  IslandView: {fileID: 2426779657916059434, guid: 8becc6ac4b400504484e36e3041534d3,
+    type: 3}
+  NameI: IslandIron
+  RecCapacity: 0
+  RecRender: 0.6
