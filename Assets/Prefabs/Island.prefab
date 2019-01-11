@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4652541553739354339}
   - component: {fileID: 4652541553739354340}
   - component: {fileID: 4652541553739354341}
-  - component: {fileID: 4652541553739354336}
   m_Layer: 10
   m_Name: Island
   m_TagString: Island
@@ -110,15 +109,3 @@ MonoBehaviour:
   iron: 0
   gold: 0
   tw: 0
---- !u!114 &4652541553739354336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4652541553739354342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27e56549bd10d694f829a538a06c34a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

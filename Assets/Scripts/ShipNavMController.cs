@@ -18,6 +18,7 @@ public class ShipNavMController : MonoBehaviour
     public bool _GoToIsland = true;
     private Transform _SelTransform;
 
+    public bool _Test = false;
 
 
     private NavMeshAgent agent;
@@ -25,30 +26,35 @@ public class ShipNavMController : MonoBehaviour
     void Start()
     {
         //  moving(_Island); 
-        _SelTransform = GetComponent<Transform>();
+
         //  recours.Recours_Capacity[0] = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_Test)
+        {
+            RecourseMoveToShip();
+            _Test = false;
+        }
+        else
+        {
+            _Home.gameObject.GetComponent<PlayerController>().wood += _capacity;
+            _capacity = 0;
+
+        }
         if (_GoToIsland)
         {
             moving(_Island);
-            if (_SelTransform.position == _Island.transform.position)
-            {
-                RecourseMoveToShip();
-            }
+
+
+
         }
 
         else
         {
-       
-            if (_SelTransform.position == _Home.transform.position)
-            {
-                RecourseMoveToHome();
-                
-            }
+
             moving(_Home);
         }
 
@@ -60,39 +66,51 @@ public class ShipNavMController : MonoBehaviour
     }
     public void RecourseMoveToShip()
     {
-        //  moving(_Home);
-        _SelTransform.position = Vector3.MoveTowards(_SelTransform.position, _Island.transform.position, _Spead * Time.deltaTime);
+        _capacity = _Island.gameObject.GetComponent<IslandController>().wood;                                                       // wood замiнити на  reсours і доробити в IslandControler
+        _Home.gameObject.GetComponent<PlayerController>().stone += 1;
+        if (_capacity == 0)
+        {
+            if (_capacity - _CapacitySize >= 0)
+            {
+                _Island.gameObject.GetComponent<IslandController>().wood -= _CapacitySize;//забираємо ресурс і зменшуємо його кількість на острові
+                _capacity = _CapacitySize;
+            }
+            //якщо ресурсів на острові менше ніж місткість корабляяя забираємо всі
+            else
+            {
+                _capacity = _Island.gameObject.GetComponent<IslandController>().wood;
+                _Island.gameObject.GetComponent<IslandController>().wood = 0;
 
-
+            }
+        }
         _GoToIsland = false;
-        _capacity = _Island.gameObject.GetComponent<IslandController>().wood;         // wood замiнити на  reсours і доробити в IslandControler
-                                                                                      //забираємо ресурс і зменшуємо його кількість на острові
-        if (_capacity - _CapacitySize >= 0)
-        {
-            _Island.gameObject.GetComponent<IslandController>().wood -= _CapacitySize;
-            _capacity = _CapacitySize;
-        }
-        //якщо ресурсів на острові менше ніж місткість корабляяя забираємо всі
-        else
-        {
-            _capacity = _Island.gameObject.GetComponent<IslandController>().wood;
-            _Island.gameObject.GetComponent<IslandController>().wood = 0;
-
-        }
 
     }
     public void RecourseMoveToHome()
     {
-        // moving(_Island);
+        _Home.gameObject.GetComponent<PlayerController>().wood += _capacity;
+        _capacity = 0;
+       
+        _GoToIsland = true;
+        //приплив на острів відвантажив , доробити
 
-        if (_SelTransform.position == _Home.transform.position)
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.CompareTag("Island"))
         {
-            _GoToIsland = true;
-            _Home.gameObject.GetComponent<PlayerController>().wood += _capacity;
-            _capacity = 0;
-            //приплив на острів відвантажив , доробити
+            RecourseMoveToShip();
+            _Home.gameObject.GetComponent<PlayerController>().gold += 1;
+
+        }
+        if (other.CompareTag("Home"))
+        {
+
+            RecourseMoveToHome();
         }
     }
+    
 }
 
 
