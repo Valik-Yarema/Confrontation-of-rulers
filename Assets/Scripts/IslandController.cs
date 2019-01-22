@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class IslandController : MonoBehaviour {
+    private GameObject ParentControl;
+    private float[] mas;
     public int wood;
     public int stone;
     public int iron;
@@ -31,15 +33,15 @@ public class IslandController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        mas = GetComponentInParent<Island_Controller>().resRender;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        tw += Time.deltaTime*2;
-        ts += Time.deltaTime * 0.8*2;
-        ti += Time.deltaTime * 0.5*2;
-        tg += Time.deltaTime * 0.1*2;
+        tw += Time.deltaTime*mas[0];
+        ts += Time.deltaTime * mas[1];
+        ti += Time.deltaTime * mas[2];
+        tg += Time.deltaTime * mas[3];
       RecourceGeneration(ref wood,ref tw);
       RecourceGeneration(ref stone, ref ts);
       RecourceGeneration(ref iron,ref ti);     

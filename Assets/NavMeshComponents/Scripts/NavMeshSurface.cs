@@ -12,7 +12,7 @@ namespace UnityEngine.AI
         Volume = 1,
         Children = 2,
     }
-
+    
     [ExecuteAlways]
     [DefaultExecutionOrder(-102)]
     [AddComponentMenu("Navigation/NavMeshSurface", 30)]
