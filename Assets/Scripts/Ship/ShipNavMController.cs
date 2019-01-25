@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ShipNavMController : MonoBehaviour
 {
@@ -20,14 +21,17 @@ public class ShipNavMController : MonoBehaviour
 
     private bool _GoToIsland = true;
     private Transform _SelTransform;
+    private bool Start_Move_Ship = false;
 
-    public bool _StartShip = false;
     public bool Targ_Trig = false;
-    
+    public bool This_Ship_Select = false;
+
+    private Vector3 position1;
     private NavMeshAgent agent;
     // Use this for initialization
     void Start()
     {
+       
         _Target.transform.position=transform.position;
        // agent.speed = _Spead;
 
@@ -36,7 +40,9 @@ public class ShipNavMController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   if(_StartShip)
+    {
+        This_Ship_Select = GetComponent<Object_Select>().This_Object_Select;
+        if (Start_Move_Ship)
         {
 
             if (_GoToIsland)
@@ -51,7 +57,37 @@ public class ShipNavMController : MonoBehaviour
             }
 
         }
+
+        if ((Input.GetMouseButtonDown(0))&&(This_Ship_Select)) go(); 
+       
     }
+
+    private void go()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        {
+            position1 = hit.point;         
+            position1.y = 0;
+            if (hit.collider.gameObject.tag == "Home")
+            {
+               GetComponent<ShipNavMController>()._Home = hit.collider.gameObject;//для вибору точки кударесурси звозити
+               
+            }
+
+            /*if(hit.collider.gameObject.tag == "Island")
+            {
+                GetComponent<ShipNavMController>()._Target = hit.collider.gameObject;
+
+            }*/
+        }
+        
+        GetComponent<ShipNavMController>()._Target.GetComponent<Transform>().position = position1;
+        GetComponent<ShipNavMController>().Start_Move_Ship = true;
+    }
+
     public void moving(GameObject _target)
     {
         agent = GetComponent<NavMeshAgent>();
@@ -63,9 +99,7 @@ public class ShipNavMController : MonoBehaviour
 
 
             if (other.gameObject.GetComponent<Island_Type>().Island_Type_res.res_cap- _CapacitySize >= 0)
-            {
-                //_Home.gameObject.GetComponent<PlayerController>().gold+= 1;//test
-
+            { 
                 other.gameObject.GetComponent<Island_Type>().Island_Type_res.res_cap -= _CapacitySize;//забираємо ресурс і зменшуємо його кількість на острові
                 _capacity = _CapacitySize;
             }
@@ -74,30 +108,25 @@ public class ShipNavMController : MonoBehaviour
             {
                 _capacity = other.gameObject.GetComponent<Island_Type>().Island_Type_res.res_cap;
                 other.gameObject.GetComponent<Island_Type>().Island_Type_res.res_cap = 0;
-                //_Home.gameObject.GetComponent<PlayerController>().stone += 1;//test
+            
                                                                           
             }
         
         _GoToIsland = false;
 
      
-       // _Island.gameObject.GetComponent<IslandController>().wood -= _capacity;
+       
 
     }
     public void RecourseMoveToHome()
-    {
-        //можливо потім переробити вивантаження ресурсів
-        switch (name_transfer_res)
+    {  for(int i=0;i< _Home.gameObject.GetComponentInParent<PlayerController>().Res.Count; i++)
         {
-            case "wood" : _Home.gameObject.GetComponentInParent<PlayerController>().wood += _capacity; break;
-            case "stone": _Home.gameObject.GetComponentInParent<PlayerController>().stone += _capacity; break;
-            case "iron" : _Home.gameObject.GetComponentInParent<PlayerController >().iron+= _capacity; break;
-            case "gold" : _Home.gameObject.GetComponentInParent<PlayerController >().gold += _capacity; break;
-            default:  break;
+            if(name_transfer_res== _Home.gameObject.GetComponentInParent<PlayerController>().NameRes[i])
+            {
+                _Home.gameObject.GetComponentInParent<PlayerController>().Res[i] += _capacity;
+            }
         }
-
-        
-        _capacity = 0;
+         _capacity = 0;
        
         _GoToIsland = true;
         //приплив на острів відвантажив , доробити

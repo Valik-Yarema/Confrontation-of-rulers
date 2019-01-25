@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor; 
 
 public class Island_Type : MonoBehaviour
 {
@@ -13,8 +14,10 @@ public class Island_Type : MonoBehaviour
     }
 
     public I_Resours Island_Type_res;
-    public int Res_IN_Isl = 0;                 //Стерти!!!
-    public int RecourceGeneration(ref int res, ref double tm)
+    public int resoursInIsland=0;
+    public GameObject Nature;
+    private new List<string> name = new List<string> { "wood", "stone", "iron", "gold" };
+    private int RecourceGeneration(ref int res, ref double tm)
     {
         if (tm >= 1)
         {
@@ -27,15 +30,37 @@ public class Island_Type : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < 4; i++)
+        {
+            if ((Island_Type_res.NameR == name[i]) && (tag != "Home")&&(gameObject.GetComponentInParent<Island_Controller>().randomNatureIsland))
+            {
+                Nature = Instantiate(gameObject.GetComponentInParent<Island_Controller>().IslandPref[i], transform.position + gameObject.GetComponentInParent<Island_Controller>().Pos_Nature[i], transform.rotation)as GameObject;
+            }
+        }
+      
         Island_Type_res.time_r = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //gameObject =(GameObject)PrefabUtility.InstantiatePrefab( gameObject.GetComponentInParent<Island_Controller>().IslandPref[0]);
+
+
         Island_Type_res.time_r += Time.deltaTime * Island_Type_res.T_Mn;
         RecourceGeneration(ref Island_Type_res.res_cap, ref Island_Type_res.time_r);
-      //  Debug.Log(Island_Type_res.NameR+" : "+Island_Type_res.res_cap+" : "+Island_Type_res.T_Mn); провірка 
-        Res_IN_Isl = Island_Type_res.res_cap;
+        //  Debug.Log(Island_Type_res.NameR+" : "+Island_Type_res.res_cap+" : "+Island_Type_res.T_Mn); провірка 
+        resoursInIsland = Island_Type_res.res_cap;
+        if (tag == "Home")
+        {
+            for (int i = 0; i < gameObject.GetComponentInParent<PlayerController>().Res.Count; i++)
+            {
+                if (Island_Type_res.NameR == gameObject.GetComponentInParent<PlayerController>().NameRes[i])
+                {
+                    gameObject.GetComponentInParent<PlayerController>().Res[i] += Island_Type_res.res_cap;
+                }
+            }
+            Island_Type_res.res_cap = 0;
+        }
     }
 }

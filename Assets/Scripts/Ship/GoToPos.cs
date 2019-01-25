@@ -12,7 +12,7 @@ public class GoToPos : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) { go = true; }
+        if ((Input.GetMouseButtonDown(0))) { go = true; }
         if (go) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -23,7 +23,7 @@ public class GoToPos : MonoBehaviour
                 position1 = hit.point;
             }
             GetComponent<ShipNavMController>()._Target.GetComponent<Transform>().position = position1;
-            GetComponent<ShipNavMController>()._StartShip = true;
+          //  GetComponent<ShipNavMController>()._StartShip = true;
 
            go = false;
         }
