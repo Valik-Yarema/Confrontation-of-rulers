@@ -6,7 +6,7 @@ public class Buildings_type : MonoBehaviour
 {
     public List<int> Prise;
     public bool Activ = true;//false
- 
+    private double tm=0;
 
     void Start()
     {
@@ -16,6 +16,7 @@ public class Buildings_type : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        tm += Time.deltaTime/4;
         if (gameObject.name == "Emporium")
         {
 
@@ -28,20 +29,46 @@ public class Buildings_type : MonoBehaviour
         {
             if (Activ)
             {
-                if (GetComponentInParent<PlayerController>().Res[2] - 4 >= 0)
+                if (tm >= 1)
                 {
-                    GetComponentInParent<PlayerController>().Res[2] -= 4;
-                    GetComponentInParent<PlayerController>().Res[5] += 2;
-                }
+                    if (GetComponentInParent<PlayerController>().Res[0] - 4 >= 0)
+                    {
+                        GetComponentInParent<PlayerController>().Res[0] -= 4;
+                        GetComponentInParent<PlayerController>().Res[4] += 3;
                     }
+                    tm = 0;
+                }
+            }
         }
         if (gameObject.name == "Forge")
         {
-
+            if (Activ)
+            {
+                if (tm >= 1)
+                {
+                    if (GetComponentInParent<PlayerController>().Res[2] - 4 >= 0)
+                    {
+                        GetComponentInParent<PlayerController>().Res[2] -= 4;
+                        GetComponentInParent<PlayerController>().Res[5] += 2;
+                    }
+                    tm = 0;
+                }
+            }
         }
         if (gameObject.name == "Smeltery")
         {
-
+            if (Activ)
+            {
+                if (tm >= 1)
+                {
+                    if (GetComponentInParent<PlayerController>().Res[2] - 6 >= 0)
+                    {
+                        GetComponentInParent<PlayerController>().Res[2] -= 2;
+                        GetComponentInParent<PlayerController>().Res[5] += 2;
+                    }
+                    tm = 0;
+                }
+            }
         }
         if (gameObject.name == "Headquarters")
         {
@@ -61,5 +88,15 @@ public class Buildings_type : MonoBehaviour
         }
 
 
+    }
+
+    private int RecourceGeneration(ref int res, ref double tm)
+    {
+        if (tm >= 1)
+        {
+            ++res;
+            tm = 0;
+        }
+        return res;
     }
 }

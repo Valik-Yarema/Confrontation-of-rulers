@@ -48,6 +48,7 @@ public class Island_Type : MonoBehaviour
 
 
         Island_Type_res.time_r += Time.deltaTime * Island_Type_res.T_Mn;
+
         RecourceGeneration(ref Island_Type_res.res_cap, ref Island_Type_res.time_r);
         //  Debug.Log(Island_Type_res.NameR+" : "+Island_Type_res.res_cap+" : "+Island_Type_res.T_Mn); провірка 
         resoursInIsland = Island_Type_res.res_cap;
