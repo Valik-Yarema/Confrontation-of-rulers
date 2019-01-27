@@ -120,11 +120,11 @@ public class ShipNavMController : MonoBehaviour
 
     }
     public void RecourseMoveToHome()
-    {  for(int i=0;i< _Home.gameObject.GetComponentInParent<PlayerController>().Res.Count; i++)
+    {  for(int i=0;i< ResPlayer.Res .Count; i++)
         {
-            if(name_transfer_res== _Home.gameObject.GetComponentInParent<PlayerController>().NameRes[i])
+            if(name_transfer_res==ResPlayer.NameRes[i])
             {
-                _Home.gameObject.GetComponentInParent<PlayerController>().Res[i] += _capacity;
+                ResPlayer.Res[i] += _capacity;
             }
         }
          _capacity = 0;

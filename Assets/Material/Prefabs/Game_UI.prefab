@@ -386,7 +386,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 475046197}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4414338165303587881}
+        m_MethodName: Build_Building
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &484441866
@@ -555,8 +566,9 @@ GameObject:
   - component: {fileID: 637868138}
   - component: {fileID: 637868140}
   - component: {fileID: 637868139}
+  - component: {fileID: 3439088923154707315}
   m_Layer: 5
-  m_Name: Panel (3)
+  m_Name: Forge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,6 +633,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3439088923154707315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637868137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73dc35afd4b744c877d9779bc37c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Building: {fileID: 0}
 --- !u!1 &642600420
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +998,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 806519670}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8049566876806917763}
+        m_MethodName: Build_Building
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &828487625
@@ -1140,8 +1176,9 @@ GameObject:
   - component: {fileID: 860168326}
   - component: {fileID: 860168328}
   - component: {fileID: 860168327}
+  - component: {fileID: 4414338165303587881}
   m_Layer: 5
-  m_Name: Panel (8)
+  m_Name: Barack_Spearman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1206,6 +1243,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4414338165303587881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860168325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73dc35afd4b744c877d9779bc37c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Building: {fileID: 0}
 --- !u!1 &895998873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,7 +1579,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 948837449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3439088923154707315}
+        m_MethodName: Build_Building
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &997543644
@@ -1624,8 +1685,9 @@ GameObject:
   - component: {fileID: 999499117}
   - component: {fileID: 999499119}
   - component: {fileID: 999499118}
+  - component: {fileID: 3064439169279465301}
   m_Layer: 5
-  m_Name: Panel (7)
+  m_Name: Barrack_Shieldman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1690,6 +1752,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3064439169279465301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999499116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73dc35afd4b744c877d9779bc37c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Building: {fileID: 0}
 --- !u!1 &1055192745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,8 +1776,9 @@ GameObject:
   - component: {fileID: 1055192746}
   - component: {fileID: 1055192748}
   - component: {fileID: 1055192747}
+  - component: {fileID: 8289278205726662268}
   m_Layer: 5
-  m_Name: Panel (4)
+  m_Name: Smeltery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1767,6 +1843,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &8289278205726662268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055192745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73dc35afd4b744c877d9779bc37c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Building: {fileID: 0}
 --- !u!1 &1057217490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,7 +1971,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1057217493}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8289278205726662268}
+        m_MethodName: Build_Building
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1135694497
@@ -1896,8 +1996,9 @@ GameObject:
   - component: {fileID: 1135694498}
   - component: {fileID: 1135694500}
   - component: {fileID: 1135694499}
+  - component: {fileID: 3969461738008510091}
   m_Layer: 5
-  m_Name: Panel (6)
+  m_Name: Barrack_Bowman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1962,6 +2063,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3969461738008510091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135694497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73dc35afd4b744c877d9779bc37c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Building: {fileID: 0}
 --- !u!1 &1151591701
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2578,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1521513089}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3064439169279465301}
+        m_MethodName: Build_Building
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1649098834
@@ -2972,7 +3097,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1793641906}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3969461738008510091}
+        m_MethodName: Build_Building
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1808239925
@@ -2986,8 +3122,9 @@ GameObject:
   - component: {fileID: 1808239926}
   - component: {fileID: 1808239928}
   - component: {fileID: 1808239927}
+  - component: {fileID: 8049566876806917763}
   m_Layer: 5
-  m_Name: Panel (5)
+  m_Name: Headquarters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3052,6 +3189,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &8049566876806917763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808239925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73dc35afd4b744c877d9779bc37c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Building: {fileID: 0}
 --- !u!1 &2006050474
 GameObject:
   m_ObjectHideFlags: 0
@@ -3514,8 +3664,9 @@ GameObject:
   - component: {fileID: 4123440177593153383}
   - component: {fileID: 6955563877152873485}
   - component: {fileID: 918958220796308754}
+  - component: {fileID: 6086998557381173339}
   m_Layer: 5
-  m_Name: Panel (1)
+  m_Name: Port
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3580,6 +3731,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &6086998557381173339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606948232817567158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73dc35afd4b744c877d9779bc37c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Building: {fileID: 0}
 --- !u!1 &1864069049690176183
 GameObject:
   m_ObjectHideFlags: 0
@@ -5061,8 +5225,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.9}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 233.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6226327335562578825
 MonoBehaviour:
@@ -5249,8 +5413,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2, y: 78}
-  m_SizeDelta: {x: -3, y: -7}
+  m_AnchoredPosition: {x: 14.35, y: 4.125}
+  m_SizeDelta: {x: 28.7, y: 91.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3743216108959366018
 CanvasRenderer:
@@ -5498,7 +5662,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1270739342811225590}
   m_Direction: 0
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6166,7 +6330,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1842097363691806568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2435220859661212988}
+        m_MethodName: Build_Building
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &5687794529623935128
@@ -6929,8 +7104,9 @@ GameObject:
   - component: {fileID: 2442846910256360781}
   - component: {fileID: 8572976355303424266}
   - component: {fileID: 4701533443689015662}
+  - component: {fileID: 2435220859661212988}
   m_Layer: 5
-  m_Name: Panel (2)
+  m_Name: Sewmill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6995,6 +7171,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &2435220859661212988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6871345017022510713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73dc35afd4b744c877d9779bc37c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Building: {fileID: 0}
 --- !u!1 &6973364237028939069
 GameObject:
   m_ObjectHideFlags: 0
@@ -7115,7 +7304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000019431114, y: 572}
+  m_AnchoredPosition: {x: -0.000021480218, y: 0}
   m_SizeDelta: {x: 0, y: 765}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &7360396935096065765
@@ -7233,7 +7422,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8583990413536207177}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6086998557381173339}
+        m_MethodName: Build_Building
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &7364431264725912883
@@ -7811,7 +8011,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3520721579955288812}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5225262499747140785}
+        m_MethodName: Build_Building
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8338598588355166305
@@ -7825,8 +8036,9 @@ GameObject:
   - component: {fileID: 6138974854327725404}
   - component: {fileID: 249313778996088136}
   - component: {fileID: 7454538008914395117}
+  - component: {fileID: 5225262499747140785}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Emporium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7891,6 +8103,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &5225262499747140785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338598588355166305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73dc35afd4b744c877d9779bc37c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Building: {fileID: 0}
 --- !u!1 &8634978329004117889
 GameObject:
   m_ObjectHideFlags: 0
@@ -8080,8 +8305,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5931676035688859819}
   m_HandleRect: {fileID: 4427167940079601965}
   m_Direction: 2
-  m_Value: 0.033741634
-  m_Size: 0.25228757
+  m_Value: 1
+  m_Size: 0.295817
   m_NumberOfSteps: 9
   m_OnValueChanged:
     m_PersistentCalls:

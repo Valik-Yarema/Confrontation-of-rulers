@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Buildings_type : MonoBehaviour
 {
-    public List<int> Prise;
+    public int[] Prise=new int[6];
     public bool Activ = true;//false
     private double tm=0;
 
@@ -31,10 +31,10 @@ public class Buildings_type : MonoBehaviour
             {
                 if (tm >= 1)
                 {
-                    if (GetComponentInParent<PlayerController>().Res[0] - 4 >= 0)
+                    if (ResPlayer.Res[0] - 4 >= 0)
                     {
-                        GetComponentInParent<PlayerController>().Res[0] -= 4;
-                        GetComponentInParent<PlayerController>().Res[4] += 3;
+                        ResPlayer.Res[0] -= 4;
+                        ResPlayer.Res[4] += 3;
                     }
                     tm = 0;
                 }
@@ -46,10 +46,10 @@ public class Buildings_type : MonoBehaviour
             {
                 if (tm >= 1)
                 {
-                    if (GetComponentInParent<PlayerController>().Res[2] - 4 >= 0)
+                    if (ResPlayer.Res[2] - 4 >= 0)
                     {
-                        GetComponentInParent<PlayerController>().Res[2] -= 4;
-                        GetComponentInParent<PlayerController>().Res[5] += 2;
+                        ResPlayer.Res[2] -= 4;
+                        ResPlayer.Res[5] += 2;
                     }
                     tm = 0;
                 }
@@ -61,10 +61,10 @@ public class Buildings_type : MonoBehaviour
             {
                 if (tm >= 1)
                 {
-                    if (GetComponentInParent<PlayerController>().Res[2] - 6 >= 0)
+                    if (ResPlayer.Res[2] - 6 >= 0)
                     {
-                        GetComponentInParent<PlayerController>().Res[2] -= 2;
-                        GetComponentInParent<PlayerController>().Res[5] += 2;
+                        ResPlayer.Res[2] -= 2;
+                        ResPlayer.Res[5] += 2;
                     }
                     tm = 0;
                 }
@@ -94,7 +94,7 @@ public class Buildings_type : MonoBehaviour
     {
         if (tm >= 1)
         {
-            ++res;
+            res++;
             tm = 0;
         }
         return res;

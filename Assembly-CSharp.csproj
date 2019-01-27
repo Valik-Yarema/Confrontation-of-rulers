@@ -72,12 +72,12 @@
     <Compile Include="Assets\Recources\AfterRenamed.cs" />
     <Compile Include="Assets\Recources\IslandProfile.cs" />
     <Compile Include="Assets\Scripts\Camera_Controller.cs" />
+    <Compile Include="Assets\Scripts\Island\Buildings\Build.cs" />
     <Compile Include="Assets\Scripts\Island\Buildings\Buildings_Controller.cs" />
     <Compile Include="Assets\Scripts\Island\Buildings\Buildings_type.cs" />
     <Compile Include="Assets\Scripts\Island\Component_Island.cs" />
     <Compile Include="Assets\Scripts\Island\Island_Controller.cs" />
     <Compile Include="Assets\Scripts\Island\Island_Type.cs" />
-    <Compile Include="Assets\Scripts\Island\IslandController.cs" />
     <Compile Include="Assets\Scripts\Island\Made_Home.cs" />
     <Compile Include="Assets\Scripts\Island\ResPlayer.cs" />
     <Compile Include="Assets\Scripts\Object_Select.cs" />

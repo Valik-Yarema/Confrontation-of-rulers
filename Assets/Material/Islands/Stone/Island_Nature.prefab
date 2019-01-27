@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4351234362971128294}
   - component: {fileID: 471684233235167298}
   - component: {fileID: 1481305527501726667}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: rock2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1494908320861725939}
   - component: {fileID: 5110974923559143818}
   - component: {fileID: 6362271424406658922}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: stone_ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 3141906963524743868}
   - component: {fileID: 3195991930872774018}
   - component: {fileID: 320468745349090954}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: rock2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 7280570466372038294}
   - component: {fileID: 3827224305333363230}
   - component: {fileID: 6710682069403727983}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: rock2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 971769160741362141}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Island_Nature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 997140449329096752}
   - component: {fileID: 3800606713978787556}
   - component: {fileID: 6433489550108664595}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: rock2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5527675618721050369}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Island_Nature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,6 +46,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
       propertyPath: m_Name
       value: grass1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -110,6 +114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.4179802
@@ -172,6 +180,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
       propertyPath: m_Name
       value: grass1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -236,6 +248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2879801
@@ -299,6 +315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.21798038
@@ -361,6 +381,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
       propertyPath: m_Name
       value: grass1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e6a1de342b8a6be48a601da214ca52ef, type: 3}
       propertyPath: m_LocalPosition.x

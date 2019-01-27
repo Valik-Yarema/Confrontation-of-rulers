@@ -8,32 +8,31 @@ public class Island_Controller : MonoBehaviour
 {
     public GameObject Buildings;
     public List<GameObject> Islands;
-    public int number_of_players=1;
+    public int number_of_players = 1;
 
     public List<GameObject> IslandPref;
-    public List<Vector3> Pos_Nature;
+    public bool randomNatureIsland = true;
+
+
     private new List<string> name = new List<string> { "wood", "stone", "iron", "gold"};
   
-    public float[] resRender = new float[4] { 2.0f,1.5f,1.0f,0.5f}; //повинне дорівнювати кіькості елементів name[]  - скрити 
-    public bool randomNatureIsland = true;
+    private float[] resRender = new float[4] { 2.0f,1.5f,1.0f,0.5f}; //повинне дорівнювати кіькості елементів name[]  - скрити 
     private float tem_Resrender=0;
 
 
     
     private void Awake()
  {
-        Pos_Nature.Add(new Vector3(-1.75f, -0.8f, 0.5f));//wood
-        Pos_Nature.Add(new Vector3(-0.33f, -0.33f, -1.4f));//stone
-        Pos_Nature.Add(new Vector3(-0.33f, -0.33f, -1.4f));//iron
-        Pos_Nature.Add(new Vector3(0,-0.5f,0));//gold
+        
 
-        for (int i = 0; i < number_of_players * 4;i++ )
+        for (int i = 0, j=0; i < number_of_players * 4;i++,j++ )
         {
       
-            Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.NameR = name[0];
-            Islands[i++].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.T_Mn = resRender[0];
+            Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.NameR = name[j];
+            Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.T_Mn = resRender[j];
+            if (j == 3) { j = 0; }
 
-          
+          /* i++;
             Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.NameR = name[1];
             Islands[i++].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.T_Mn = resRender[1];
 
@@ -44,9 +43,9 @@ public class Island_Controller : MonoBehaviour
      
             Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.NameR = name[3];
             Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.T_Mn = resRender[3];
+            */
         }
         for (int i = ((number_of_players*4)); i < Islands.Count; i++)
-        // for (int i = 0; i < Islands.Count; i++)
         {
             int ren = Random.Range((int)0, (int)4);
             if (!(Islands[i].tag == "Home"))
@@ -59,14 +58,5 @@ public class Island_Controller : MonoBehaviour
           
         }
     }
-    void Start()
-    {
-      
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
