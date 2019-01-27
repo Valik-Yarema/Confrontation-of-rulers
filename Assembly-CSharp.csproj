@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Island\Island_Type.cs" />
     <Compile Include="Assets\Scripts\Island\IslandController.cs" />
     <Compile Include="Assets\Scripts\Island\Made_Home.cs" />
+    <Compile Include="Assets\Scripts\Island\ResPlayer.cs" />
     <Compile Include="Assets\Scripts\Object_Select.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Ship\GoToPos.cs" />

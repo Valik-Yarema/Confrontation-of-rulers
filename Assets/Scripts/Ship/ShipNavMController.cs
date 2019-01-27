@@ -17,7 +17,7 @@ public class ShipNavMController : MonoBehaviour
     public int _CapacitySize = 50;
 
     [Range(0, 10)]
-    public float _Spead;
+    public float Spead;
 
     private bool _GoToIsland = true;
     private Transform _SelTransform;
@@ -41,6 +41,7 @@ public class ShipNavMController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GetComponent<NavMeshAgent>().speed = Spead;
         This_Ship_Select = GetComponent<Object_Select>().This_Object_Select;
         if (Start_Move_Ship)
         {
