@@ -28,7 +28,7 @@ public static class ResPlayer
     //public static int[,] Prise = new int[9, 6];
     public static List<int[]> Prise=new List<int[]>
    {
-      new int[]{50,20,0,0,0,0},//Emporium
+     new int[] {50,20,0,0,0,0},//Emporium
      new int[] {80,50,0,10,0,0},//Port
      new int[] {50,50,50,20,0,0},//Sawmill
      new int[] {50,100,50,30,20,0},//Forge

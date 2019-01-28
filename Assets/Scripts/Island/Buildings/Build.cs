@@ -6,18 +6,20 @@ using UnityEngine.UI;
 public class Build : MonoBehaviour
 {
     public GameObject Building;
-    // public List<GameObject> Building;
-    //  public List<Button> button;
-    //  public GUIContent Content;
+    public Text TextR;
     private void Start()
     {
         Building.SetActive(false);
-        /*for (int i = 0; i < Building.Count; i++)
+        TextR.text = "";
+        
+        for (int i = 0; i < ResPlayer.NameRes.Count; i++)
         {
-            Building[0].SetActive(false);
-        }*/
+            TextR.text += ResPlayer.NameRes[i].ToString()+":" + Building.GetComponent<Buildings_type>().Prise[i++].ToString()+" ";
+            TextR.text += ResPlayer.NameRes[i].ToString() + ":" + Building.GetComponent<Buildings_type>().Prise[i].ToString() + "\n";
+        }
+        
     }
-    public void Build_Building()
+    public void Build_Building(Button butt)
     { for (int i = 0; i < ResPlayer.NameBuild.Count; i++)
         {
             int k = 0;
@@ -32,8 +34,9 @@ public class Build : MonoBehaviour
                     }
                 }
                 if (k == 6)
-                {
+                { 
                     Building.SetActive(true);
+                    butt.gameObject.SetActive(false);
                 }
 
 

@@ -17,6 +17,7 @@ public class Buildings_type : MonoBehaviour
     void Update()
     {
         tm += Time.deltaTime/4;
+
         if (gameObject.name == "Emporium")
         {
 

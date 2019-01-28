@@ -90,6 +90,8 @@
     <Compile Include="Assets\Scripts\UI\HomeOn.cs" />
     <Compile Include="Assets\Scripts\UI\MasPanelOf.cs" />
     <Compile Include="Assets\Scripts\UI\Panel_Ship.cs" />
+    <Compile Include="Assets\Scripts\War&amp;Units\Unit_Controller.cs" />
+    <Compile Include="Assets\Scripts\War&amp;Units\Units.cs" />
     <None Include="Assets\Asset_D\MobileDepthWater\Shaders\WaterTwoSide\Depth\DiffuseDepthWaterTwoSide.shader" />
     <None Include="Assets\Asset_D\MobileDepthWater\Shaders\WaterOpaque\Height\DiffuseColorHeightWater.shader" />
     <None Include="Assets\Asset_D\MobileDepthWater\Shaders\WaterTwoSide\Height\DiffuseColorHeightWaterTwoSide.shader" />
