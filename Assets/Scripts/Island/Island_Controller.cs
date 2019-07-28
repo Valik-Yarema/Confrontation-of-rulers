@@ -32,18 +32,7 @@ public class Island_Controller : MonoBehaviour
             Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.T_Mn = resRender[j];
             if (j == 3) { j = 0; }
 
-          /* i++;
-            Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.NameR = name[1];
-            Islands[i++].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.T_Mn = resRender[1];
-
         
-            Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.NameR = name[2];
-            Islands[i++].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.T_Mn = resRender[2];
-
-     
-            Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.NameR = name[3];
-            Islands[i].gameObject.GetComponentInChildren<Island_Type>().Island_Type_res.T_Mn = resRender[3];
-            */
         }
         for (int i = ((number_of_players*4)); i < Islands.Count; i++)
         {
